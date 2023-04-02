@@ -50,10 +50,10 @@
 }
 @media(min-width:992px) {
 .onmap{
-    height:400px;
+    height:auto;
 }
 .onmap iframe {
-    height:400px;
+    height:auto;
 }
 }
 h5{
@@ -62,35 +62,35 @@ h5{
 @media(min-width:1200px) {
 .carousel-inner{
 
-    height:500px;
+    height:auto;
 }
 
 }
 @media(min-width:1400px) {
 .carousel-inner{
 
-    height:600px;
+    height:auto;
 }
 
 }
 @media(min-width:992px) {
 .carousel-inner{
 
-    height:400px;
+    height:auto;
 }
 
 }
 @media(min-width:1200px) {
 .carousel-inner{
 
-    height:500px;
+    height:auto;
 }
 
 }
 @media(min-width:1400px) {
 .carousel-inner{
 
-    height:600px;
+    height:auto;
 }
 
 }
