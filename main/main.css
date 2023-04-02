@@ -48,18 +48,18 @@
     width:100%;
     height:auto;
 }
-@media(min-width:992px) {
+/* @media(min-width:992px) {
 .onmap{
     height:auto;
 }
 .onmap iframe {
     height:auto;
 }
-}
+} */
 h5{
     color:rgb(210, 11, 87);
 }
-@media(min-width:1200px) {
+/* @media(min-width:1200px) {
 .carousel-inner{
 
     height:auto;
@@ -93,7 +93,7 @@ h5{
     height:auto;
 }
 
-}
+} */
 .accordion{
     margin: 1.5rem;
     width:1600px;
