@@ -4,47 +4,76 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menu - Red Chill Restaurant</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="main/main.css">
   <link rel="stylesheet" href="main/responsive.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <!-- Navbar here (same as index.html) -->
+  <!-- ✅ Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">RED CHILL RESTAURANT</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="review.html">Review</a></li>
+          <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link text-warning fw-bold" href="orders.html">Staff Orders</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-  <section class="container mt-5">
-    <h2 class="text-center">Our Menu</h2>
-    <div class="row">
-      <!-- Example Item -->
-      <div class="col-sm-6 col-md-3 mt-4">
-        <div class="card">
-          <img src="images/1biryani.png" class="card-img-top" alt="Chicken Biryani">
+  <!-- ✅ Menu Section -->
+  <main class="container" style="padding-top:90px;">
+    <h2 class="text-center mb-4">Our Menu</h2>
+    <div class="row g-4">
+      <!-- Example Menu Item -->
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="images/chicken_biryani.jpg" class="card-img-top" alt="Chicken Biryani">
           <div class="card-body">
             <h5 class="card-title">Chicken Biryani</h5>
-            <p class="card-text">Delicious Hyderabadi style biryani.</p>
-            <button class="btn btn-primary add-to-order" data-name="Chicken Biryani" data-price="99">Add to Order</button>
+            <p class="card-text">Aromatic rice with tender chicken.</p>
+            <p class="fw-bold">₹180</p>
+            <button class="btn btn-primary add-to-cart" data-name="Chicken Biryani" data-price="180">Add to Cart</button>
           </div>
         </div>
       </div>
-      <!-- Add more items here with data-price -->
+      <!-- Add more items similarly -->
     </div>
-  </section>
+  </main>
 
-  <!-- Floating Cart Button -->
-  <button id="cartBtn" class="btn btn-warning cart-btn">Cart 🛒</button>
+  <!-- ✅ Floating Cart -->
+  <button id="openCartBtn" class="btn btn-primary"
+    style="position:fixed; right:1rem; bottom:5.5rem; z-index:9998;">Cart</button>
 
-  <!-- Cart Modal -->
-  <div id="cartModal" class="cart-modal">
-    <div class="cart-content">
-      <h3>Your Order</h3>
-      <ul id="cartItems"></ul>
-      <input type="text" id="tableNumber" placeholder="Enter Table Number" class="form-control mb-2">
-      <input type="email" id="customerEmail" placeholder="Enter your Email" class="form-control mb-2">
-      <button id="confirmOrder" class="btn btn-success">Confirm Order</button>
-      <button id="closeCart" class="btn btn-danger">Close</button>
+  <div id="cartPanel" class="d-none bg-white border p-3 rounded shadow"
+    style="position:fixed; right:1rem; bottom:1rem; width:300px; z-index:9999;">
+    <h5>Your Order</h5>
+    <div id="cartItems" style="max-height:200px; overflow:auto;"></div>
+    <hr>
+    <div class="d-flex justify-content-between">
+      <span>Total</span>
+      <span id="cartTotal">₹0</span>
     </div>
+    <hr>
+    <input id="tableNumber" class="form-control mb-2" placeholder="Table number">
+    <input id="customerEmail" class="form-control mb-2" placeholder="Your email">
+    <button id="confirmOrderBtn" class="btn btn-success w-100">Confirm Order</button>
+    <button class="btn btn-secondary w-100 mt-2" onclick="toggleCart()">Close</button>
   </div>
 
+  <!-- ✅ Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>if(window.emailjs){ emailjs.init("YOUR_EMAILJS_USER_ID"); }</script>
   <script src="main/app.js"></script>
 </body>
 </html>
