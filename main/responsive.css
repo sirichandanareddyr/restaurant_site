@@ -1,0 +1,58 @@
+
+
+/* Mobile First */
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+    padding: 20px;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+
+  /* Navbar */
+  .navbar-brand {
+    font-size: 1.1rem;
+  }
+
+  /* Cards */
+  .card img {
+    height: 160px;
+  }
+
+  /* Forms */
+  form input, form textarea, form select {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  /* Center text */
+  .text-center {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 50vh;
+  }
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .btn-primary {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
