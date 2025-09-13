@@ -244,51 +244,55 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
         </script>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
   (function() {
+    // Initialize EmailJS with your Public Key
     emailjs.init("cIJTn4EXrzLBNjAnx");  
   })();
 
   const tableType = document.getElementById("tableType");
-  const costDisplay = document.getElementById("costDisplay"); 
+  const costDisplay = document.getElementById("costDisplay");
 
   // Update cost when table changes
-  tableType.addEventListener("change", function () {
+  tableType.addEventListener("change", function() {
     const selected = tableType.value;
 
     let cost = 0;
-    if (selected.includes("Silver")) cost = 2000;
-    else if (selected.includes("Gold")) cost = 4000;
-    else if (selected.includes("Platinum")) cost = 6000;
+    if (selected === "Silver-2000") cost = 2000;
+    if (selected === "Gold-4000") cost = 4000;
+    if (selected === "Platinum-6000") cost = 6000;
 
     costDisplay.textContent = "₹" + cost;
+    costDisplay.dataset.value = cost; // store numeric cost safely
   });
 
   // Handle booking form
-  document.getElementById("dineoutForm").addEventListener("submit", function (e) {
+  document.getElementById("dineoutForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
     const bookingDetails = {
-      branch: document.querySelector("[name='branch']").value,
+      branch: document.querySelector("select[name='branch']").value,
       tableType: tableType.value,
-      cost: costDisplay.textContent.replace("₹", ""), // 
-      customerName: document.querySelector("[name='name']").value,
-      phone: document.querySelector("[name='phone']").value,
-      email: document.querySelector("[name='email']").value,
+      cost: costDisplay.dataset.value || 0,
+      customerName: document.querySelector("input[name='name']").value,
+      phone: document.querySelector("input[name='phone']").value,
+      email: document.querySelector("input[name='email']").value
     };
 
-    //  Send mail via EmailJS
+    // Send mail via EmailJS
     emailjs.send("service_wlktllp", "template_uw6t9x8", bookingDetails)
-      .then(function () {
+      .then(function() {
         alert(" Booking confirmed! Details sent to your email and admin.");
         document.getElementById("dineoutForm").reset();
-        costDisplay.textContent = "₹0"; 
-      }, function (error) {
+        costDisplay.textContent = "₹0";
+      }, function(error) {
         alert(" Error sending booking details. Please try again.");
         console.error("EmailJS Error:", error);
       });
   });
 </script>
+
 
 </body>
 </html>
