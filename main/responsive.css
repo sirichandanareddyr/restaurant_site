@@ -1,0 +1,49 @@
+/* Mobile First */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    .hero {
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .card img {
+        height: auto;
+        max-height: 180px;
+        width: 100%;
+        object-fit: cover;
+    }
+    form input, form textarea, form select {
+        font-size: 0.9rem;
+        padding: 8px;
+        width: 100%;
+    }
+    .text-center {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    .hero p {
+        font-size: 0.9rem;
+    }
+    .btn-primary {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+    }
+    footer {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+}

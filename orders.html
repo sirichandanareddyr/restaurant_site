@@ -1,19 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>RCR</title>
-    <link href="main.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>order</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="main/main.css">
     <link rel="stylesheet" href="main/responsive.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
-
-<body>
+<body class="p-5 bg-light">
     <section>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed">
             <div class="container">
                 <a class="navbar-brand" href="#">RED CHILL RESTAURANT</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -22,103 +19,104 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="menu.html">Menu</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                BRANCHES
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="chennai.html">CHENNAI</a></li>
-                                <li><a class="dropdown-item" href="hyderabad.html">HYDERABAD</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="review.html">Review</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="aboutus.html">About us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact us</a>
-                        </li>
-
                     </ul>
-
                 </div>
             </div>
         </nav>
     </section>
-    <section>
-        <img class="ssss" src="images/hyderabad.png" height="600" width="100%">
-    </section>
-    <section>
-        <div class="container">
-            <div class="row p-5">
-                <h1 class="display-3 text-primary text-center"> HYDERABAD SPECIAlS</h1>
-                <p class="text-center">GET CHILL WITH RED CHILL</p>
-            </div>
-            <div class="row p-3">
-                <div class="col-sm-6 col-lg-3">
-                    <div class="card">
-                        <img src="images/food 1.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">CHICKEN LOLIPOP</h5>
-                            <p class="card-text">Enjoy your meal with chill in RED CHILL.</p>
+    <div class="container">
+    <h1 class="text-center mb-4">Orders </h1>
 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="card">
-                        <img src="images/food 2.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">TIKKA BIRYANI</h5>
-                            <p class="card-text">Enjoy your meal with chill in RED CHILL.</p>
+    <!-- Admin Authentication -->
+    <div id="loginSection">
+        <h3>Admin Login</h3>
+        <input type="password" id="adminPass" class="form-control mb-2" placeholder="Enter Admin Password">
+        <button id="loginBtn" class="btn btn-primary">Login</button>
+    </div>
 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="card">
-                        <img src="images/food 3.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">DESSERTS</h5>
-                            <p class="card-text">Enjoy your meal with chill in RED CHILL.</p>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="card">
-                        <img src="images/food 6.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">SOFT DRINKS</h5>
-                            <p class="card-text">Enjoy your meal with chill in RED CHILL.</p>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+    <!-- Orders Table -->
+        <div id="ordersSection" style="display:none;">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h3>Orders for <span class="text-danger">Table <span id="tableDisplay"></span></span></h3>
+            <button id="clearOrders" class="btn btn-danger">Clear Orders</button>
         </div>
-    </section>
-    </section>
-    <section>
-        <div class="onmap">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3803.8450847990935!2d78.44167531487881!3d17.562560787973858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8ff8652b6823%3A0x981713dbb4b708c3!2sMalla%20Reddy%20University!5e0!3m2!1sen!2sin!4v1672391360520!5m2!1sen!2sin"
-                width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <table class="table table-bordered table-striped align-middle">
+            <thead class="table-dark">
+            <tr>
+                <th>Image</th>
+                <th>Item</th>
+                <th>Price (₹)</th>
+            </tr>
+            </thead>
+            <tbody id="ordersList"></tbody>
+            <tfoot class="table-secondary">
+            <tr>
+                <th colspan="2">Total</th>
+                <th id="totalPrice">0</th>
+            </tr>
+            </tfoot>
+        </table>
         </div>
-    </section>
-    <footer class="text-center text-lg-start text-white m-4" style="background-color: #1c2331">
+    </div>
+
+    <script>
+        const loginBtn = document.getElementById("loginBtn");
+        const ordersSection = document.getElementById("ordersSection");
+        const loginSection = document.getElementById("loginSection");
+        const clearBtn = document.getElementById("clearOrders");
+
+        loginBtn.addEventListener("click", () => {
+        const pass = document.getElementById("adminPass").value;
+        if (pass === "admin123") {  // 🔑 Change password here
+            loginSection.style.display = "none";
+            ordersSection.style.display = "block";
+
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+            const tableNumber = localStorage.getItem("tableNumber") || "N/A";
+
+            // Show table number
+            document.getElementById("tableDisplay").textContent = tableNumber;
+
+            // Render orders
+            let total = 0;
+            const ordersList = document.getElementById("ordersList");
+            ordersList.innerHTML = "";
+
+            cart.forEach(item => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                <td><img src="${item.image}" class="order-img"></td>
+                <td>${item.name}</td>
+                <td>${item.price}</td>
+            `;
+            ordersList.appendChild(row);
+            total += item.price;
+            });
+
+            document.getElementById("totalPrice").textContent = total;
+        } else {
+            alert("Incorrect password!");
+        }
+        });
+
+        // Clear orders after serving
+        clearBtn.addEventListener("click", () => {
+        if (confirm("Are you sure you want to clear all orders for this table?")) {
+            localStorage.removeItem("cart");
+            localStorage.removeItem("tableNumber");
+            document.getElementById("ordersList").innerHTML = "";
+            document.getElementById("totalPrice").textContent = "0";
+            document.getElementById("tableDisplay").textContent = "N/A";
+            alert("Orders cleared!");
+        }
+        });
+    </script>
+        <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
         <!-- Section: Social media -->
         <section class="d-flex justify-content-between p-4" style="background-color: #6351ce">
             <!-- Left -->
@@ -239,9 +237,12 @@
         <!-- Copyright -->
     </footer>
     <!-- Footer -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+        </script>
 </body>
 
 </html>
+
+

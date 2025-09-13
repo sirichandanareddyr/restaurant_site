@@ -1,6 +1,5 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,194 +8,202 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="main/main.css">
-</head>
+    <link rel="stylesheet" href="main/responsive.css">
+    </head>
 
-<body>
+    <body>
     <!-- add navigation here -->
     <section>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container">
-                <a class="navbar-brand" href="#">RED CHILL RESTAURANT</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="menu.html">Menu</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                BRANCHES
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="hyderabad.html">Hyderabad</a></li>
-                                <li><a class="dropdown-item" href="chennai.html">Chennai</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="review.html">Review</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="aboutus.html">About us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">contact Us</a>
-                        </li>
-                    </ul>
-                </div>
+        <div class="container">
+            <a class="navbar-brand" href="#">RED CHILL RESTAURANT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="menu.html">Menu</a>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">BRANCHES</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="hyderabad.html">Hyderabad</a></li>
+                    <li><a class="dropdown-item" href="chennai.html">Chennai</a></li>
+                </ul>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link " href="review.html">Review</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link " href="aboutus.html">About us</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="contact.html">contact Us</a>
+                </li>
+                <!-- Cart / Orders -->
+                <li class="nav-item">
+                <a class="nav-link" href="orders.html">Orders</a>
+                </li>
+            </ul>
             </div>
+        </div>
         </nav>
     </section>
     <!-- header section ends here -->
 
-
     <!-- cards are starting here -->
-
-
-
     <section>
-        <div class="container  ">
-            <div class="row p-5 bg-warning">
-                <h1 class="display-3 text-primary text-center">MENU</h1>
-                <p class="text-center ">THIS IS SIMPLY A HEAVEN FOR FOOD LOVERS.
-                </p>
+        <div class="container">
+        <div class="row p-5 bg-warning">
+            <h1 class="display-3 text-primary text-center">MENU</h1>
+            <p class="text-center">THIS IS SIMPLY A HEAVEN FOR FOOD LOVERS.</p>
+        </div>
+
+        <div class="row mt-4">
+            <!-- Each card has price + order button -->
+            <div class="col-sm-6 col-md-3">
+            <div class="card">
+                <img src="images/1..png" class="card-img-top" alt="Chinese">
+                <div class="card-body">
+                <h5 class="card-title">Chinese</h5>
+                <p>Price: ₹250</p>
+                <button class="btn btn-primary add-to-cart" data-name="Chinese" data-price="250">Order</button>
+                </div>
             </div>
-            <div class="row mt-mb-5">
-                <div class="col-sm-6 col-md-3">
-                    <div class="card">
-                        <img src="images/1..png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Chinese</h5>
-                            <p class="card-text">Enjoy your meal with chill in RED CHILL.</p>
+            </div>
 
-                        </div>
-                    </div>
+            <div class="col-sm-6 col-md-3">
+            <div class="card">
+                <img src="images/pancake2.png" class="card-img-top" alt="Pancakes">
+                <div class="card-body">
+                <h5 class="card-title">Pancakes</h5>
+                <p>Price: ₹180</p>
+                <button class="btn btn-primary add-to-cart" data-name="Pancakes" data-price="180">Order</button>
                 </div>
-                <div class="col-sm-6 col-md-3 mt-mb-5">
-                    <div class="card">
-                        <img src="images/pancake2.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Pancakes</h5>
-                            <p class="card-text">Enjoy your meal with chill in RED CHILL.</p>
+            </div>
+            </div>
 
-                        </div>
-                    </div>
+            <div class="col-sm-6 col-md-3">
+            <div class="card">
+                <img src="images/momos 2.png" class="card-img-top" alt="Momos">
+                <div class="card-body">
+                <h5 class="card-title">Momos</h5>
+                <p>Price: ₹120</p>
+                <button class="btn btn-primary add-to-cart" data-name="Momos" data-price="120">Order</button>
                 </div>
-                <div class="col-sm-6 col-md-3 mt-mb-5">
-                    <div class="card">
-                        <img src="images/momos 2.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Momos</h5>
-                            <p class="card-text">Enjoy your meal with chill in RED CHILL.</p>
+            </div>
+            </div>
 
-                        </div>
-                    </div>
+            <div class="col-sm-6 col-md-3">
+            <div class="card">
+                <img src="images/ckcn.jpg" class="card-img-top" alt="Chicken Crunchy">
+                <div class="card-body">
+                <h5 class="card-title">Chicken Crunchy</h5>
+                <p>Price: ₹300</p>
+                <button class="btn btn-primary add-to-cart" data-name="Chicken Crunchy" data-price="300">Order</button>
                 </div>
-                <div class="col-sm-6 col-md-3 mt-mb-5">
-                    <div class="card">
-                        <img src="images/ckcn.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Chicken chrunchy</h5>
-                            <p class="card-text">Enjoy your meal with chill in RED CHILL.</p>
+            </div>
+            </div>
 
-                        </div>
-                    </div>
+            <div class="col-sm-6 col-md-3">
+            <div class="card">
+                <img src="images/ice 2.png" class="card-img-top" alt="Cones">
+                <div class="card-body">
+                <h5 class="card-title">Cones</h5>
+                <p>Price: ₹80</p>
+                <button class="btn btn-primary add-to-cart" data-name="Cones" data-price="80">Order</button>
                 </div>
-                <div class="col-sm-6 col-md-3 mt-mb-5">
-                    <div class="card">
-                        <img src="images/ice 2.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Cones</h5>
-                            <p class="card-text">Enjoy your meal with chill in RED CHILL.</p>
+            </div>
+            </div>
 
-                        </div>
-                    </div>
+            <div class="col-sm-6 col-md-3">
+            <div class="card">
+                <img src="images/2.png" class="card-img-top" alt="French Fries">
+                <div class="card-body">
+                <h5 class="card-title">French Fries</h5>
+                <p>Price: ₹100</p>
+                <button class="btn btn-primary add-to-cart" data-name="French Fries" data-price="100">Order</button>
                 </div>
-                <div class="col-sm-6 col-md-3 mt-mb-5">
-                    <div class="card">
-                        <img src="images/2.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">French fries</h5>
-                            <p class="card-text">Enjoy your meal with chill in RED CHILL.</p>
+            </div>
+            </div>
 
-                        </div>
-                    </div>
+            <div class="col-sm-6 col-md-3">
+            <div class="card">
+                <img src="images/4 nood.png" class="card-img-top" alt="Soft Noodles">
+                <div class="card-body">
+                <h5 class="card-title">Soft Noodles</h5>
+                <p>Price: ₹150</p>
+                <button class="btn btn-primary add-to-cart" data-name="Soft Noodles" data-price="150">Order</button>
                 </div>
-                <div class="col-sm-6 col-md-3 mt-mb-5">
-                    <div class="card">
-                        <img src="images/4 nood.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Soft Noodles</h5>
-                            <p class="card-text">Enjoy your meal with chill in RED CHILL.</p>
+            </div>
+            </div>
 
-                        </div>
-                    </div>
+            <div class="col-sm-6 col-md-3">
+            <div class="card">
+                <img src="images/P_z_xlMGuEk.png" class="card-img-top" alt="KFC">
+                <div class="card-body">
+                <h5 class="card-title">KFC</h5>
+                <p>Price: ₹350</p>
+                <button class="btn btn-primary add-to-cart" data-name="KFC" data-price="350">Order</button>
                 </div>
-                <div class="col-sm-6 col-md-3 mt-mb-5">
-                    <div class="card">
-                        <img src="images/P_z_xlMGuEk.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">KFC</h5>
-                            <p class="card-text">Enjoy your meal with chill in RED CHILL.</p>
+            </div>
+            </div>
 
-                        </div>
-                    </div>
+            <div class="col-sm-6 col-md-3">
+            <div class="card">
+                <img src="images/5 nood.png" class="card-img-top" alt="Chilli Flex Noodles">
+                <div class="card-body">
+                <h5 class="card-title">Chilli Flex Noodles</h5>
+                <p>Price: ₹160</p>
+                <button class="btn btn-primary add-to-cart" data-name="Chilli Flex Noodles" data-price="160">Order</button>
                 </div>
-                <div class="col-sm-6 col-md-3 mt-mb-5">
-                    <div class="card">
-                        <img src="images/5 nood.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Chilli Flex Noodles</h5>
-                            <p class="card-text">Enjoy your meal with chill in RED CHILL.</p>
+            </div>
+            </div>
 
-                        </div>
-                    </div>
+            <div class="col-sm-6 col-md-3">
+            <div class="card">
+                <img src="images/6egg.png" class="card-img-top" alt="Egg Bhuji">
+                <div class="card-body">
+                <h5 class="card-title">Egg Bhuji</h5>
+                <p>Price: ₹90</p>
+                <button class="btn btn-primary add-to-cart" data-name="Egg Bhuji" data-price="90">Order</button>
                 </div>
-                <div class="col-sm-6 col-md-3 mt-mb-5">
-                    <div class="card">
-                        <img src="images/6egg.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Egg Bhuji</h5>
-                            <p class="card-text">Enjoy your meal with chill in RED CHILL.</p>
+            </div>
+            </div>
 
-                        </div>
-                    </div>
+            <div class="col-sm-6 col-md-3">
+            <div class="card">
+                <img src="images/7 rice.png" class="card-img-top" alt="Tikka Fried Rice">
+                <div class="card-body">
+                <h5 class="card-title">Tikka Fried Rice</h5>
+                <p>Price: ₹200</p>
+                <button class="btn btn-primary add-to-cart" data-name="Tikka Fried Rice" data-price="200">Order</button>
                 </div>
-                <div class="col-sm-6 col-md-3 mt-mb-5">
-                    <div class="card">
-                        <img src="images/7 rice.png" class="card- img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Tikka Fried Rice</h5>
-                            <p class="card-text">Enjoy your meal with chill in RED CHILL.</p>
+            </div>
+            </div>
 
-                        </div>
-                    </div>
+            <div class="col-sm-6 col-md-3">
+            <div class="card">
+                <img src="images/2.p.png" class="card-img-top" alt="Shakes">
+                <div class="card-body">
+                <h5 class="card-title">Shakes</h5>
+                <p>Price: ₹150</p>
+                <button class="btn btn-primary add-to-cart" data-name="Shakes" data-price="150">Order</button>
                 </div>
-                <div class="col-sm-6 col-md-3 mt-mb-5">
-                    <div class="card">
-                        <img src="images/2.p.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Shakes</h5>
-                            <p class="card-text">Enjoy your meal with chill in RED CHILL.</p>
-
-                        </div>
-                    </div>
-                </div>
+            </div>
             </div>
         </div>
+        </div>
     </section>
-
-
-
-    <!-- cards ends  here -->
-
+        <!-- Section: Links  -->
+        
     <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
         <!-- Section: Social media -->
         <section class="d-flex justify-content-between p-4" style="background-color: #6351ce">
@@ -318,10 +325,32 @@
         <!-- Copyright -->
     </footer>
     <!-- Footer -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
-        </script>
+  <!-- Order Handling Script -->
+  <script>
+    let cart = [];
+
+    document.querySelectorAll(".add-to-cart").forEach(btn => {
+      btn.addEventListener("click", function () {
+        const name = this.dataset.name;
+        const price = parseInt(this.dataset.price);
+        cart.push({ name, price });
+        alert(name + " added to cart!");
+        localStorage.setItem("cart", JSON.stringify(cart));
+      });
+    });
+
+    document.getElementById("goToOrders").addEventListener("click", () => {
+      const tableNumber = document.getElementById("tableNumber").value;
+      if (!tableNumber) {
+        alert("Please enter table number!");
+        return;
+      }
+      localStorage.setItem("tableNumber", tableNumber);
+      window.location.href = "orders.html";
+    });
+  </script>
 </body>
-
 </html>
